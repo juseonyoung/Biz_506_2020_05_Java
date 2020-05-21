@@ -13,6 +13,6 @@ public class Var_02 {
 		int num4 = rnd.nextInt(100)+1;
 		
 		
-		
+		System.out.println();
 	}
 }
