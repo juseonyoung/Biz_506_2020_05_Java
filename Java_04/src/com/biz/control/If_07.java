@@ -17,9 +17,13 @@ public class If_07 {
 		System.out.println("총점 : " +sum);
 		System.out.println("평균 : " +avg);
 		
+		//50~99까지 나오게 코딩하기
 		//평균이 60점 이상이면 합격, 아니면 불합격
 		if(avg>=60) {System.out.println("합격");}
 		else System.out.println("불합격");
+		
+		
+		
 		
 		
 		
