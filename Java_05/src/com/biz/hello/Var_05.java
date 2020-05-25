@@ -7,9 +7,8 @@ public class Var_05 {
 	public static void main(String[] args) {
 		
 		Random rnd = new Random();
-		int i =50;
-		int num1 = rnd.nextInt(i)+i;
-		int num2 = rnd.nextInt(i)+i;
+		int num1 = rnd.nextInt(50)+50;
+		int num2 = rnd.nextInt(50)+51;
 	
 		System.out.println(num1+num2);
 		
