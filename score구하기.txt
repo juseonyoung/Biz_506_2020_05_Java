@@ -1,0 +1,67 @@
+package com.biz.grade;
+
+import java.util.Random;
+
+public class Score {
+
+	//학생 20명의 국 영 수 과목을 출력하고 학생별 총점 평균 과목별 총점 평균 나타내기
+	
+	public static void main(String[] args) {
+		
+		int[] intKor = new int[20];
+		int[] intEng = new int[20];
+		int[] intMath = new int[20];
+		
+		Random rnd = new Random();
+		// 각 과목에 학생들의 점수 담기
+		for(int i=0; i<20; i++) {
+			intKor[i]=rnd.nextInt(50)+51;
+			intEng[i]=rnd.nextInt(50)+51;
+			intMath[i]=rnd.nextInt(50)+51;
+		}
+		
+		// 학생별 점수 총점 평균내기
+		int intStSum[] = new int[20];
+		for(int i=0; i<20; i++) {
+			intStSum[i]=intKor[i];
+			intStSum[i]+=intEng[i];
+			intStSum[i]+=intMath[i];
+		}
+		
+		// 과목별 점수 총점 평균내기
+		int intKorSum=0;
+		int intEngSum=0;
+		int intMathSum=0;
+		
+		for(int i=0; i<20; i++) {
+			intKorSum+=intKor[i];
+			intEngSum+=intEng[i];
+			intMathSum+=intMath[i];
+		}
+		
+		System.out.println("학번\t국어\t수학\t영어\t총점\t평균\t");
+		for(int i=0; i<20; i++) {
+		System.out.printf("%d\t %d\t %d\t %d\t %d\t %d\t\n",
+				i+1,
+				intKor[i],
+				intMath[i],
+				intEng[i],
+				intStSum[i],
+				intStSum[i]/3);
+		}
+		
+		System.out.println("===================================================");
+		System.out.printf("%s\t %d\t %d\t %d\t",
+				"총점",
+				intKorSum,
+				intMathSum,
+				intEngSum
+				);
+		System.out.println();
+		System.out.printf("%s\t %d\t %d\t %d\t",
+				"평균",
+				intKorSum/20,
+				intMathSum/20,
+				intEngSum/20);
+	}
+}
