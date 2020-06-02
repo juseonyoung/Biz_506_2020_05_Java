@@ -1,0 +1,119 @@
+package com.biz.classes.model;
+
+public class BankVO {
+
+	private String strNum;
+	private String strDate;
+	
+	private int intInput;
+	private int intOutput;
+	private int intBalance;
+	public String getStrnum() {
+		return strNum;
+	}
+	public void setStrnum(String strnum) {
+		this.strNum = strnum;
+	}
+	public String getStrdate() {
+		return strDate;
+	}
+	public void setStrdate(String strdate) {
+		this.strDate = strdate;
+	}
+	public int getIntInput() {
+		return intInput;
+	}
+	public void setIntInput(int intInput) {
+		this.intInput = intInput;
+	}
+	public int getIntOutput() {
+		return intOutput;
+	}
+	public void setIntOutput(int intOutput) {
+		this.intOutput = intOutput;
+	}
+	public int getIntBalance() {
+		return intBalance;
+	}
+	public void setIntBalance(int intBalance) {
+		this.intBalance = intBalance;
+	}
+	
+	
+	
+}
+
+
+
+
+
+package com.biz.classes.model;
+
+import com.biz.classes.service.BankService;
+
+public class ClassEx_12 {
+
+	public static void main(String[] args) {
+		
+		BankVO[] bankList = new BankVO[5];
+		bankList[0] = new BankVO();
+		bankList[1] = new BankVO();
+		bankList[2] = new BankVO();
+		bankList[3] = new BankVO();
+		bankList[4] = new BankVO();
+		
+		for(int i=0; i<bankList.length; i++) {
+		bankList[i].setStrnum("001");}
+
+		bankList[0].setStrdate("2020-05-01");
+		bankList[1].setStrdate("2020-05-02");
+		bankList[2].setStrdate("2020-05-03");
+		bankList[3].setStrdate("2020-05-04");
+		bankList[4].setStrdate("2020-05-05");
+		
+		
+		bankList[0].setIntInput(5000);
+		bankList[2].setIntInput(5000);
+
+		bankList[1].setIntOutput(1000);
+		bankList[3].setIntOutput(1000);
+		bankList[4].setIntOutput(1000);
+		
+		
+		bankList[0].setIntBalance(5000);
+		bankList[1].setIntBalance(4000);
+		bankList[2].setIntBalance(9000);
+		bankList[3].setIntBalance(8000);
+		bankList[4].setIntBalance(7000);
+		
+		BankService bankservice =new BankService();
+		
+		bankservice.bankList(bankList);
+	}
+}
+
+
+
+
+
+package com.biz.classes.service;
+
+import com.biz.classes.model.BankVO;
+
+public class BankService {
+
+	public void bankList(BankVO[] bankList) {
+		
+		System.out.println("계좌번호\t날짜\t\t입금\t출금\t잔액");
+		for(int i =0; i< bankList.length ; i++) {
+
+			System.out.printf("%s\t %s\t %d\t %d\t %d\n",
+					bankList[i].getStrnum(),
+					bankList[i].getStrdate(),
+					bankList[i].getIntInput(),
+					bankList[i].getIntOutput(),
+					bankList[i].getIntBalance()
+					);
+	}
+}
+}
