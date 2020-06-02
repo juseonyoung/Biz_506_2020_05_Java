@@ -2,12 +2,12 @@ package com.biz.classes.model;
 
 public class BankVO {
 
-	public String strnum;
-	public String strdate;
+	private String strnum;
+	private String strdate;
 	
-	public int intInput;
-	public int intOutput;
-	public int intValance;
+	private int intInput;
+	private int intOutput;
+	private int intValance;
 	
 	public String getStrnum() {
 		return strnum;
@@ -39,7 +39,6 @@ public class BankVO {
 	public void setIntValance(int intValance) {
 		this.intValance = intValance;
 	}
-	
 	
 	
 	
