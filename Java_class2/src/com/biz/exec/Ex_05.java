@@ -29,8 +29,8 @@ public class Ex_05 {
 		
 		ScoreServiceV2 scoreService = new ScoreServiceV2();
 		scoreService.setScoreList(score);
-		scoreService.scoreSum();
-		scoreService.scoreList();		
+		scoreService.scoreSum(); //sum 호출
+		scoreService.scoreList();	//list 호출	
 		
 		
 		
