@@ -31,7 +31,7 @@ public class ScoreEx_02 {
 		}
 		
 		ScoreServiceV2 sService = new ScoreServiceV2();
-		sService.scoreList(scoreList);
+		sService.scoreList(scoreList); //매개변수로 scoreList받아라
 		sService.stSum();
 		sService.stAvg();
 		sService.scoreList();
