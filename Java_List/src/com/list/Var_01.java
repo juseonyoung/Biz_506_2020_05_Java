@@ -7,7 +7,7 @@ public class Var_01 {
 		//구구단
 		
 		int num1=2;
-		int num2=0;
+		//int num2=0;
 		int j=0;
 		
 		for(int i =2; i <6; i++) {

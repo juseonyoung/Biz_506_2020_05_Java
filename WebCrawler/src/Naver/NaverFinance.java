@@ -24,7 +24,6 @@ public class NaverFinance {
 		Elements line = doc.select("table.type2 > tbody > tr");
 		System.out.println(line);
 
-		int count = 0;
 		// 향상된 for문 for each
 
 		// 가져올 때 jsoup 가져오기!!

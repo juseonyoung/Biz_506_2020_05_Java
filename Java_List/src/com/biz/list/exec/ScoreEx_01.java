@@ -52,10 +52,10 @@ public class ScoreEx_01 {
 	    ScoreVO getScore = scoreList.get(0);
 	    
 	    // 2. 인스턴스로 부터 각 필드변수 값을 읽기
-	    String num = getScore.getNum();
-	    int kor =getScore.getKor();
-	    int eng =getScore.getEng();
-	    int math=getScore.getMath();
+	    //String num = getScore.getNum();
+	    //int kor =getScore.getKor();
+	    //int eng =getScore.getEng();
+	    //int math=getScore.getMath();
 	    
 	    // 전체리스트를 추출하기
 	    System.out.println("번호\t국어\t영어\t수학");

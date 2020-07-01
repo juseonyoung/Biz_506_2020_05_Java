@@ -2,7 +2,6 @@ package Naver;
 
 import java.io.IOException;
 
-import javax.jws.Oneway;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -41,7 +40,7 @@ public class NaverMovie2 {
 
 				writer = movie.select("div.score_reple a>span").get(0).text();
 				score = Integer.parseInt(movie.select("div.star_score >em").get(0).text());
-				time = movie.select("div.score_reple em").get(1).text();
+				time = movie.select("div.score_reple em").get(1).text().substring(0,10);
 				contents = movie.select("div.score_reple > p>span").get(0).text();
 
 				System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
