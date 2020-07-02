@@ -2,17 +2,16 @@ package com.biz.score;
 
 public class ScoreVO {
 
-	private int stNum;
+	private String stNum;
 	private int intKor;
 	private int intEng;
 	private int intMath;
 	private int intSum;
 	private int intAvg;
-	
-	public int getStNum() {
+	public String getStNum() {
 		return stNum;
 	}
-	public void setStNum(int stNum) {
+	public void setStNum(String stNum) {
 		this.stNum = stNum;
 	}
 	public int getIntKor() {
@@ -45,6 +44,14 @@ public class ScoreVO {
 	public void setIntAvg(int intAvg) {
 		this.intAvg = intAvg;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
