@@ -69,6 +69,9 @@ public class BookServiceImplV1 implements BookService {
 		} catch (Exception i) {
 			System.out.println("가격은 숫자만 입력이 가능합니다");
 			System.out.println(bookvo.getTitle());
+			// 이 코드는 사용자에게 편의를 위해 알려주는 정보!!!!!!!!
+			// 이전까지 정보는 저장되었으니 ㅇㅇ책부터 입력하던걸 알려주고 
+			// 다시 입력해라 알려주는 
 			return true;
 		}
 		bookvo.setPrice(intPrice);
