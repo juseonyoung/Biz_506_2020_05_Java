@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.biz.student.domain.Student;
+import com.biz.student.domain.StudentVO;
 
 public class StudentServiceImplV1 implements StudentService {
 
@@ -32,7 +32,7 @@ public class StudentServiceImplV1 implements StudentService {
 	// 현재 클래스를 상속할 수 있도록 생각하고 구현한다면 필드변수를 protected로 선언한다.
 	// 만약 private으로 선언하게되면 상속받은 클래스에서 이 변수들을 다시 선언해 주어야 한다.
 	
-	protected List<Student> studentList; // 변수 studentList 를 필드변수에 선언하고
+	protected List<StudentVO> studentList; // 변수 studentList 를 필드변수에 선언하고
 	// 어떤 메서드들이 아래에 만들어지든지 사용할 수 있다.
 	protected Scanner scan;
 
@@ -52,7 +52,7 @@ public class StudentServiceImplV1 implements StudentService {
 	@Override
 	public boolean inputStudent() {
 		scan = new Scanner(System.in);
-		Student st = new Student();
+		StudentVO st = new StudentVO();
 
 		System.out.print("학번을 입력해 주세요>> (END:입력종료)");
 		String num = scan.nextLine();
@@ -69,7 +69,7 @@ public class StudentServiceImplV1 implements StudentService {
 			System.out.println("다시 입력해 주세요");
 			return true;
 		}
-		st.setNum(intNum);
+		st.setNum(num);
 
 		System.out.print("성명을 입력해 주세요>>");
 		String name = scan.nextLine();
@@ -119,7 +119,7 @@ public class StudentServiceImplV1 implements StudentService {
 		System.out.println("-------------------------------------------------");
 
 		for (int i = 0; i < size; i++) {
-			Student sd = studentList.get(i); // List에서 get(i)해서 불러와야 함
+			StudentVO sd = studentList.get(i); // List에서 get(i)해서 불러와야 함
 			System.out.print(sd.getNum() + "\t");
 			System.out.print(sd.getName() + "\t");
 			System.out.print(sd.getGrade() + "\t");

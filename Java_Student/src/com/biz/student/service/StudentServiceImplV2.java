@@ -3,7 +3,7 @@ package com.biz.student.service;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
-import com.biz.student.domain.Student;
+import com.biz.student.domain.StudentVO;
 
 // ImplV1에 정의된 필드변수, method를 상속받아서 작성하는 클래스
 // 필드변수와 method는 public, protected 로 되어있는 경우만 상속된다!!
@@ -48,7 +48,7 @@ public class StudentServiceImplV2 extends StudentServiceImplV1 {
 		outPut.println("학번\t이름\t학년\t학과");
 		outPut.println("---------------------------------------------------------");
 
-		for (Student sVO : studentList) { // 굳이 왜 이렇게.....
+		for (StudentVO sVO : studentList) { // 굳이 왜 이렇게.....
 
 			outPut.print(sVO.getNum() + "\t");
 			outPut.print(sVO.getName() + "\t");

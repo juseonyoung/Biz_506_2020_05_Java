@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import com.biz.student.domain.Student;
+import com.biz.student.domain.StudentVO;
 
 public class StudentServiceImplV4 extends StudentServiceImplV2 {
 
@@ -46,8 +46,8 @@ public class StudentServiceImplV4 extends StudentServiceImplV2 {
 				// 읽어들인 라인을 분해하여 학생정보로 변환
 				String[] students = reader.split(":");
 				
-				Student sVO = new Student();
-				sVO.setNum(Integer.valueOf(students[0]));
+				StudentVO sVO = new StudentVO();
+				sVO.setNum((students[0]));
 				sVO.setName(students[1]);
 				sVO.setGrade(Integer.valueOf(students[2]));
 				sVO.setDept(students[4]);
