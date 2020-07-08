@@ -22,5 +22,33 @@ public class Lotto {
 			System.out.println(intList.get(i)+"\t");
 		}
 		System.out.println("\n부자되세요");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		// 1~45 담을 리스트 만들기
+		 List<Integer> lottoList = new ArrayList<>();
+		 
+		 // 리스트에 숫자담기
+		 for(int i=0; i<45; i++) {
+			 lottoList.add(i+1);
+			 
+		 }
+		 
+		 // 섞기
+		 Collections.shuffle(lottoList);
+		 
+		 //6가지 출력
+		 for(int i=0; i<6; i++) {
+			 System.out.println(lottoList.get(i));
+		 }
 	}
 }
