@@ -26,6 +26,7 @@ public class BookServiceImplV1 implements BookService {
 
 	@Override
 	public boolean inputBook() {
+
 		// inputBook() method내에서만
 		// Scanner를 사용하게 될것으로 예상되므로
 		// 필드변수에 선언하지 않고
@@ -42,6 +43,54 @@ public class BookServiceImplV1 implements BookService {
 		// 호출한 곳에 return
 		if (strTitle.equals("END")) {
 			return false;
+		//while(true) 
+		// inputBook 메소드 안에서만 스캐너 쓸 것 같으면
+		// 메서드의 지역변수로 선언, 초기화 해도됨( 장점: inputBook() method의 수행이 끝나면
+		// 변수가 자동으로 해제는 효과를 낼 수 있다
+		//Scanner scan =new Scanner(System.in);
+		
+		BookVO bookvo = new BookVO();
+		// 제목 입력할 칸이 나옴
+		System.out.println("제목(END를 입력하면 종료됩니다) >>");
+		String title = scan.nextLine();
+		if(title.equals("END")) {
+			return false; //END입력시 호출한 곳에 종료를 알림
+		}
+		bookvo.setTitle(title);
+		
+		System.out.println("출판사를 입력해주세요 >>");
+		String comp =scan.nextLine();
+		bookvo.setComp(comp);
+		
+		System.out.println("저자를 입력해주세요 >>");
+		String writer=scan.nextLine();
+		bookvo.setWriter(writer);
+		
+		
+		// 연도와 가격을 문자로 입력하면?
+		// 다시 되돌려서 입력하도록 해보기..
+			
+		// bookList.add(bookVO) 코드 실행전에 return true 실행하면
+		// 현재 method가 실행되면서 입력했던 도서정보(도서명, 출판사 등)들이
+		// 아직 추가되기 전이므로 입력된 정보는 모두 무시되어 버린다.
+		//main에서는 true가 return 되었으므로 아무런 판단없이 다시 입력을 수행하는 
+		// inputBook() method를 호출하게 될 것이고 
+		// return 전에 현재 도서를 다시 입력하라는 메시지를 보여주었으므로
+		// 입력하는 사용자는 당연히 현재 입력하던 도서를 다시 입력하게 될 것이다.
+			
+		System.out.println("가격을 입력해 주세요>>>");
+		String price =scan.nextLine();
+		
+		int intPrice=0;
+		try {
+			intPrice= Integer.valueOf(price);
+		} catch (Exception i) {
+			System.out.println("가격은 숫자만 입력이 가능합니다");
+			System.out.println(bookvo.getTitle());
+			// 이 코드는 사용자에게 편의를 위해 알려주는 정보!!!!!!!!
+			// 이전까지 정보는 저장되었으니 ㅇㅇ책부터 입력하던걸 알려주고 
+			// 다시 입력해라 알려주는 
+			return true;
 		}
 		bookVO.setTitle(strTitle);
 
