@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
 import com.biz.student.domain.StudentVO;
 
@@ -65,6 +66,13 @@ public class StudentServiceImplV5 extends StudentServiceImplV2 {
 		}
 
 		return true;
+	}
+
+	@Override
+	public List<StudentVO> getStudentList() {
+		return this.studentList;
+		// 필드변수로 선언된 studentList를 외부에서 사용할 수 있도록
+		// getter 수행
 	}
 
 }

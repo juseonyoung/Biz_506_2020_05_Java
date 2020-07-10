@@ -130,4 +130,10 @@ public class StudentServiceImplV1 implements StudentService {
 
 	}
 
+	@Override
+	public List<StudentVO> getStudentList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

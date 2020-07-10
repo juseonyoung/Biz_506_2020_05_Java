@@ -1,5 +1,9 @@
 package com.biz.student.service;
 
+import java.util.List;
+
+import com.biz.student.domain.StudentVO;
+
 public interface StudentService {
 
 	
@@ -20,4 +24,5 @@ public interface StudentService {
 	public boolean inputStudent();
 	public void studentList();
 	
+	public List<StudentVO> getStudentList();
 }
