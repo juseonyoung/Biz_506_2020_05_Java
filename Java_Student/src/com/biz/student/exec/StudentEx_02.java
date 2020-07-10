@@ -15,6 +15,7 @@ public class StudentEx_02 {
 				break;
 			}
 		}
+		
 		sService.studentList();
 	}
 }

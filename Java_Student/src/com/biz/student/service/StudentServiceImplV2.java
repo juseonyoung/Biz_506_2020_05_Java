@@ -23,6 +23,7 @@ public class StudentServiceImplV2 extends StudentServiceImplV1 {
 
 	public StudentServiceImplV2() {
 		String studentFile = "src/com/biz/student/exec/student_list.txt";
+		// student_list는 콘솔이 출력되는 곳
 		// exception handling 예외처리
 				// 파일작성 과정에서 아무리 코드를 잘 작성하더라도 운영체제 상 생기는 예외를
 				// 코드에서 처리하기 어려움을 compiler가 알고 있음

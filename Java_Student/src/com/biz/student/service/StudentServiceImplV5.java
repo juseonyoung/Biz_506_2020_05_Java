@@ -68,6 +68,7 @@ public class StudentServiceImplV5 extends StudentServiceImplV2 {
 		return true;
 	}
 
+<<<<<<< HEAD
 	@Override
 	public List<StudentVO> getStudentList() {
 		return this.studentList;
@@ -76,3 +77,6 @@ public class StudentServiceImplV5 extends StudentServiceImplV2 {
 	}
 
 }
+=======
+}
+>>>>>>> dd52aec33dcaec029aee588be8faaf21636632f8

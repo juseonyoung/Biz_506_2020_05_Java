@@ -115,7 +115,7 @@ public class StudentServiceImplV1 implements StudentService {
 
 		System.out.println("학생 정보 리스트");
 		System.out.println("=================================================");
-		System.out.println("학번\t성명\t학년\t전공");
+		System.out.println("학번\t성명\t학년\t전공호호");
 		System.out.println("-------------------------------------------------");
 
 		for (int i = 0; i < size; i++) {
