@@ -17,11 +17,13 @@ public class ScoreServiceImplV1 implements ScoreService {
 	protected List<StudentVO> studentList;
 	protected List<ScoreVO> scoreList;
 	protected PrintStream outPut;
-
+	StudentService stService = new StudentServiceImplV5();
+	studentList = 
+	
 	@Override
 	public void inputScore() {
 		// TODO Auto-generated method stub
-		scoreList = new ArrayList<ScoreVO>();
+		/*scoreList = new ArrayList<ScoreVO>();
 
 		String scoreFile = "src/com/biz/student/exec/score.txt";
 		FileReader fileReader = null;
@@ -78,6 +80,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 		
 
 	}
+	*/
 
 	// for (Student sVO : scoreList) { // 굳이 왜 이렇게.....
 
@@ -188,11 +191,17 @@ public class ScoreServiceImplV1 implements ScoreService {
 		
 		// 데이터의 join
 		// scoreList, studentList를 join해서 데이터를 출력하는코드
+		
+		//score의 학번으로 studentList에서 찾기
+		boolean stdCheck = false;
 		for (ScoreVO sVO : scoreList) {
 			
+			//학번이 같은 학생 정보 찾았으면
 			System.out.print(sVO.getNum() + "\t");
-			for (StudentVO std : studentList) {
 
+			if(sVO.getNum().equals(sVO.getNum())) {
+				System.out.println();
+			}
 				// 정보가 겹치는 것!! 학번이다
 				if (sVO.getNum().equals(std.getNum())) {
 					
