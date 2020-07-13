@@ -11,8 +11,7 @@ package com.biz.student.service;
  */
 public interface ScoreService {
 
-	public boolean inputStudent();
-	public void inputScore();
+	public boolean inputScore();
 	
 	public void calcSum();
 	public void calcAvg();

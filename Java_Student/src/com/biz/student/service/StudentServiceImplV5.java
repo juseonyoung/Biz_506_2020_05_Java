@@ -68,15 +68,11 @@ public class StudentServiceImplV5 extends StudentServiceImplV2 {
 		return true;
 	}
 
-<<<<<<< HEAD
 	@Override
 	public List<StudentVO> getStudentList() {
 		return this.studentList;
 		// 필드변수로 선언된 studentList를 외부에서 사용할 수 있도록
 		// getter 수행
-	}
 
 }
-=======
 }
->>>>>>> dd52aec33dcaec029aee588be8faaf21636632f8

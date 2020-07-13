@@ -47,11 +47,8 @@ public class StudentServiceImplV4 extends StudentServiceImplV2 {
 				String[] students = reader.split(":");
 				
 				StudentVO sVO = new StudentVO();
-<<<<<<< HEAD
 				sVO.setNum(students[0]);
-=======
 				sVO.setNum((students[0]));
->>>>>>> dc5360f5d8db09998eabec0ee24a5392bfbb42d4
 				sVO.setName(students[1]);
 				sVO.setGrade(Integer.valueOf(students[2]));
 				sVO.setDept(students[4]);

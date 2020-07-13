@@ -35,12 +35,9 @@ public class StudentVO {
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
-<<<<<<< HEAD:Java_Student/src/com/biz/student/domain/StudentVO.java
 	
 	
 		
-=======
->>>>>>> dc5360f5d8db09998eabec0ee24a5392bfbb42d4:Java_Student/src/com/biz/student/domain/Student.java
 }
 	
 	
